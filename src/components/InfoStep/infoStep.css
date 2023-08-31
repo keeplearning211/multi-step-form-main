@@ -1,0 +1,27 @@
+.info-content-wrapper {
+ display: grid;
+ gap: 1rem;
+ padding: 1rem 0;
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+.info-input {
+  padding: 0.3rem 0.8rem;
+  height: 3rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.3rem;
+}
+
+::placeholder {
+  color: var(--cool-gray);
+}

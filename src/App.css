@@ -56,7 +56,10 @@ body {
   background-color: var(--white);
 
   display: grid;
-  place-content: center;
   height: 100vh;
   margin: 0;
+}
+
+button {
+  cursor: pointer;
 }

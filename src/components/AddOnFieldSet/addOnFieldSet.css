@@ -1,0 +1,71 @@
+.add_ons_content-wrapper {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.add_on_option-container {
+  display: grid;
+  grid-template-areas: 
+    'checkbox   name         price'
+    'checkbox   description  price';
+  padding: 0.75rem;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 0.3rem;
+}
+
+.add_on_option-container:has(input:checked) {
+  border-color: black;
+}
+
+.add_on_option-checkmark {
+  grid-area: checkbox;
+  width: 1.1rem;
+  aspect-ratio: 1/1;
+  align-self: center;
+  justify-self: start;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+}
+
+input:checked ~ .add_on_option-checkmark {
+  background-color: var(--purplish-blue);
+  display: grid;
+  place-content: center;
+}
+
+.add_on_option-checkmark img {
+  display: none;
+}
+input:checked ~ .add_on_option-checkmark img {
+  display: block;
+  transform: scale(0.8);
+}
+.add_on_option-name {
+  grid-area: name;
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.8px;
+}
+
+.add_on_option-description {
+  grid-area: description;
+  font-size: 0.9rem;
+  letter-spacing: -0.8px;
+  color: var(--cool-gray);
+}
+
+.add_on_option-price {
+  grid-area: price;
+  align-self: center;
+  font-size: 0.8rem;
+  letter-spacing: -0.8px;
+  color: var(--purplish-blue);
+}
+
+.add_on_option-container input {
+  position: absolute;
+  opacity: 0;
+}
+

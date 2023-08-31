@@ -1,0 +1,74 @@
+.fishing_up-wrapper {
+  display: grid;
+  padding: 3rem 1rem 0;
+}
+
+.fishing_up-plan {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 0.5rem;
+}
+
+.fishing_up-plan--name {
+  font-size: 0.9376rem;
+  letter-spacing: -1px;
+  font-weight: var(--fw-bold);
+  color: var(--marine-blue);
+}
+
+.fishing_up-plan--action {
+  display: block;
+  font-weight: var(--fw-regular);
+  color: var(--cool-gray);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+.fishing_up-plan--price {
+  font-size: 0.9375rem;
+  font-weight: var(--fw-extra-bold);
+  color: var(--marine-blue);
+}
+
+.fishing_up-add_ons--wrapper {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.fishing_up-add_ons--item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fishing_up-add_ons--item__name {
+  font-size: 0.9375rem;
+  font-weight: var(--fw-regular);
+  color: var(--cool-gray);
+}
+
+.fishing_up-add_ons--item__price {
+  font-size: 0.875rem;
+  color: var(--marine-blue);
+  font-weight: var(--fw-bold);
+}
+
+.fishing_up-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.fishing_up-total--label {
+  font-size: 0.9375rem;
+  font-weight: var(--fw-regular);
+  color: var(--cool-gray);
+}
+
+.fishing_up-total--value {
+  font-size: 1rem;
+  font-weight: var(--fw-extra-bold);
+  color: var(--purplish-blue);
+}

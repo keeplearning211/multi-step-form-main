@@ -1,0 +1,85 @@
+.plan_content-wrapper {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.billing_option-container {
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
+  padding: 0.75rem;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 0.3rem;
+}
+
+.billing_option-container:has(input:checked){
+  border-color: black;
+}
+
+.billing_option-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.billing_option-icon[data-icon="arcade"] {
+  background-image: url('src/assets/images/icon-arcade.svg');
+}
+
+.billing_option-icon[data-icon="advanced"] {
+  background-image: url('src/assets/images/icon-advanced.svg');
+}
+
+.billing_option-icon[data-icon="pro"] {
+  background-image: url('src/assets/images/icon-pro.svg');
+}
+
+.billing_option-free {
+  color: var(--marine-blue);
+}
+
+input[name="billingOption"]{
+  position: absolute;
+  opacity: 0;
+}
+
+/* billing period */
+.billing_period-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.billing_period-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.billing_period-switch {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  width: 3rem;
+  height: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: var(--marine-blue);
+}
+
+
+.billing_period-switch--slider {
+  width: 1rem;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius:50%;
+  transform: translateX(-86%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .billing_period-switch--slider {
+  -webkit-transform: translateX(86%);
+  -ms-transform: translateX(86%);
+  transform: translateX(86%);
+}

@@ -1,0 +1,13 @@
+.sidebar {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100vw;
+  height: 10.75rem;
+  background: url('src/assets/images/bg-sidebar-mobile.svg');
+  background-size: cover;
+}

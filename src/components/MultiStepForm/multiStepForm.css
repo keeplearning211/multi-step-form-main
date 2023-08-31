@@ -1,0 +1,35 @@
+.multi-step-form {
+  display: grid;
+  grid-template-rows: 10.75rem auto;
+
+  min-height: 100vh;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  padding: 1rem;
+
+  height: 100%;
+}
+
+.form-action {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* button */
+
+.link-button {
+  border: none;
+  color: var(--cool-gray);
+}
+
+.next-button {
+  background-color: var(--marine-blue);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 0.75rem 1.2rem;
+}

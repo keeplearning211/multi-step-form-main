@@ -1,0 +1,22 @@
+.thanks-message-wrapper {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.thanks-icon {
+  height: 3rem;
+}
+
+.thanks-message-title {
+  font-size: 1.5rem;
+  color: var(--marine-blue);
+  font-weight: var(--fw-extra-bold);
+}
+
+.thanks-message-content {
+  color: var(--cool-gray);
+  transform: translateY(-13px);
+}
