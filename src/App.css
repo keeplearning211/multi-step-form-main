@@ -62,4 +62,13 @@ body {
 
 button {
   cursor: pointer;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+[class*='container'].selected {
+  border-color: black;
 }

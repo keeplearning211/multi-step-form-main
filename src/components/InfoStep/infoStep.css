@@ -2,7 +2,6 @@
  display: grid;
  gap: 1rem;
  padding: 1rem 0;
-
 }
 
 .form-group {
@@ -13,6 +12,13 @@
 
 label {
   font-size: 0.875rem;
+}
+
+.form-group span.error {
+  color: var(--strawberry-red);
+}
+.form-group input.error {
+  border: 2px solid var(--strawberry-red);
 }
 
 .info-input {

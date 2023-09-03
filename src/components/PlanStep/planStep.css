@@ -14,9 +14,13 @@
   border-radius: 0.3rem;
 }
 
-.billing_option-container:has(input:checked){
+/* .billing_option-container.selected {
   border-color: black;
-}
+} */
+
+/* .billing_option-container:has(input:checked){
+  border-color: black;
+} */
 
 .billing_option-icon {
   width: 40px;
@@ -42,6 +46,16 @@
 input[name="billingOption"]{
   position: absolute;
   opacity: 0;
+}
+
+.billing_option-name{
+  font-size: 1rem;
+  font-weight: var(--fw-extra-bold);
+  color: var(--marine-blue);
+}
+
+.billing_option-price{
+  color: var(--cool-gray);
 }
 
 /* billing period */
@@ -82,4 +96,14 @@ input:checked + .billing_period-switch--slider {
   -webkit-transform: translateX(86%);
   -ms-transform: translateX(86%);
   transform: translateX(86%);
+}
+
+.billing_period-label {
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  color: var(--cool-gray);}
+
+.billing_period-label.selected {
+  color: var(--marine-blue);
+  font-weight: var(--fw-extra-bold);
 }
