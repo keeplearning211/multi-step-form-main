@@ -13,7 +13,7 @@ function PlanStep() {
       description="You have the option of monthly or yearly billing."
     >
       <div className="plan_content-wrapper">
-        <div className="billing-option-list">
+        <div className={`billing-option-list ${yearly ? 'yearly-option' : ''}`}>
           <BillingOption value={yearly ? BillingOptionValue.ArcadeYr : BillingOptionValue.ArcadeMo} />
           <BillingOption value={yearly ? BillingOptionValue.AdvancedYr : BillingOptionValue.AdvancedMo} />
           <BillingOption value={yearly ? BillingOptionValue.ProYr : BillingOptionValue.ProMo} />

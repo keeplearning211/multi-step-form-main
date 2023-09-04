@@ -122,6 +122,11 @@ input:checked + .billing_period-switch--slider {
   .billing-option-list {
     grid-template-columns: repeat(3,1fr);
     height: 10rem;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .billing-option-list.yearly-option {
+    height: 11.25rem;
   }
 
   .billing_option-container {
