@@ -1,5 +1,5 @@
-import { AddOnOptionProps } from '.';
 import { AddOnOptionValue } from '../../types';
+import { AddOnOptionProps } from './AddOnOption';
 
 export const getAddOnOptions = (yearly: boolean): AddOnOptionProps[] => ([
   {
