@@ -8,6 +8,9 @@
 
 .thanks-icon {
   height: 3rem;
+  width: 3rem;
+  background-image: url('src/assets/images/icon-thank-you.svg');
+  background-size: 3rem;
 }
 
 .thanks-message-title {
@@ -27,6 +30,8 @@
   }
   .thanks-icon {
     height: 5rem;
+    width: 5rem;
+    background-size: 5rem;
   }  
   .thanks-message-title {
     font-size: 2rem;

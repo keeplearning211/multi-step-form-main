@@ -13,7 +13,8 @@ export function AddOnOption({ name, description, price, value }: AddOnOptionProp
   return (
     <label className={`add_on_option-container ${addOnOption.includes(value) ? 'selected' : ''}`}>
       <input type="checkbox" name="addOnOption" value={value} onChange={handelAddOnCheckboxChange} checked={addOnOption.includes(value)} />
-      <span className="add_on_option-checkmark"> <img src="./assets/images/icon-checkmark.svg" /> </span>
+      <span className="add_on_option-checkmark"> <i className="icon-checkmark"></i> </span>
+      {/* <span className="add_on_option-checkmark"> <img src="src/assets/images/icon-checkmark.svg" /> </span> */}
       <p className="add_on_option-name">{name}</p>
       <p className="add_on_option-description">{description}</p>
       <p className="add_on_option-price">{`+$${price}/${yearly ? 'yr' : 'mo'}`}</p>

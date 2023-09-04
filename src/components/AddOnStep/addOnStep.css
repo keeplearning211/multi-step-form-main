@@ -41,6 +41,18 @@ input:checked ~ .add_on_option-checkmark {
 input:checked ~ .add_on_option-checkmark img {
   display: block;
 }
+
+.icon-checkmark{
+  width: 12px;
+  height: 9px;
+  background-image: url('src/assets/images/icon-checkmark.svg');
+}
+.add_on_option-checkmark .icon-checkmark {
+  display: none;
+}
+input:checked ~ .add_on_option-checkmark .icon-checkmark {
+  display: block;
+}
 .add_on_option-name {
   grid-area: name;
   font-size: 1rem;
