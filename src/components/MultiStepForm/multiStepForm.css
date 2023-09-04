@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: 10.75rem auto;
 
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .subscription-form {
@@ -25,6 +25,10 @@
 .link-button {
   border: none;
   color: var(--cool-gray);
+  font-weight: var(--fw-bold);
+}
+.link-button:hover {
+  color: var(--marine-blue);
 }
 
 .next-button {
@@ -34,10 +38,45 @@
   padding: 0.5rem 1rem;
   border: none;
 }
+
+.next-button:hover {
+  background-color: var(--marine-blue-hover);
+}
 .confirm-button {
   background-color: var(--purplish-blue);
   color: var(--white);
   border-radius: 6px;
   padding: 0.5rem 1rem;
   border: none;
+  font-weight: var(--fw-bold);
+}
+.confirm-button:hover {
+  background-color: var(--purplish-blue-hover);
+}
+
+@media screen and (min-width: 850px) {
+  .multi-step-form {
+    display: grid;
+    grid-template-columns: 17.1875rem auto;
+    height:var(--sidebar-desktop-height);
+    width: 52.5625rem;
+  }
+
+  .subscription-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 1rem;
+    padding-left: 6rem;
+  
+    height: var(--sidebar-desktop-height);
+  }
+
+  .confirm-button {
+    padding:  0.75rem 2rem;
+  }
+  .next-button {
+    padding: 0.75rem 1.5rem;
+  }
 }

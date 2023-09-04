@@ -52,6 +52,7 @@ function InfoInput({ name, type, label, placeholder }: InputProps) {
   const hasError = isInfoSubmitted && errors[name]
   return (
     <label className="label form-group">{label}
+      {hasError && <span className="error" data-device="desktop">{errors[name]}</span>}
       <input
         className={`info-input ${hasError ? 'error' : ''}`}
         type={type}
@@ -60,7 +61,7 @@ function InfoInput({ name, type, label, placeholder }: InputProps) {
         placeholder={placeholder}
         onChange={handleInputChange}
       />
-      {hasError && <span className="error">{errors[name]}</span>}
+      {hasError && <span className="error" data-device="mobile">{errors[name]}</span>}
     </label>
   )
 }

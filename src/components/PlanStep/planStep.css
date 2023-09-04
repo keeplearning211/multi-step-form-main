@@ -4,6 +4,11 @@
   padding: 1rem 0;
 }
 
+.billing-option-list {
+  display: grid;
+  gap: 1rem;
+}
+
 .billing_option-container {
   display: flex;
   justify-content: start;
@@ -15,11 +20,11 @@
 }
 
 /* .billing_option-container.selected {
-  border-color: black;
+  border-color: var(--marine-blue);
 } */
 
 /* .billing_option-container:has(input:checked){
-  border-color: black;
+  border-color: var(--marine-blue);
 } */
 
 .billing_option-icon {
@@ -62,7 +67,7 @@ input[name="billingOption"]{
 .billing_period-wrapper {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1.55rem;
 }
 
 .billing_period-switch input {
@@ -75,7 +80,7 @@ input[name="billingOption"]{
   display: grid;
   place-content: center;
   cursor: pointer;
-  width: 3rem;
+  width: 2.25rem;
   height: 1.25rem;
   border-radius: 1.25rem;
   background-color: var(--marine-blue);
@@ -83,11 +88,11 @@ input[name="billingOption"]{
 
 
 .billing_period-switch--slider {
-  width: 1rem;
+  width: 0.75rem;
   aspect-ratio: 1/1;
   background-color: #fff;
-  border-radius:50%;
-  transform: translateX(-86%);
+  border-radius: 50%;
+  transform: translateX(-70%);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -106,4 +111,21 @@ input:checked + .billing_period-switch--slider {
 .billing_period-label.selected {
   color: var(--marine-blue);
   font-weight: var(--fw-extra-bold);
+}
+
+@media screen and (min-width: 850px) {
+  .plan_content-wrapper {
+    gap: 3rem;
+    padding-top: 2.2rem;
+  }
+
+  .billing-option-list {
+    grid-template-columns: repeat(3,1fr);
+    height: 10rem;
+  }
+
+  .billing_option-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }

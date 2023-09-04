@@ -11,3 +11,18 @@
   background: url('src/assets/images/bg-sidebar-mobile.svg');
   background-size: cover;
 }
+
+
+@media screen and (min-width: 850px) {
+  .sidebar {
+    display: grid;
+    place-content: start;
+    padding: 2.45rem 2rem;
+    gap: 1.95rem;
+
+    width: 274px;
+    height:var(--sidebar-desktop-height);
+    background: url('src/assets/images/bg-sidebar-desktop.svg');
+
+  }
+}

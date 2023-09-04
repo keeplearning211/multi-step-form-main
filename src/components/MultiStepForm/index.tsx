@@ -18,14 +18,14 @@ const infoStepError: Record<InfoFieldName, (value: string) => string> = {
   name: function (value: string) {
     if (isEmpty(value)) return 'This field is required.'
 
-    return value.length < 3 ? 'Name must be at least 3 characters long' : '';
+    return value.length < 3 ? 'Name must be at least 3 characters long.' : '';
   },
 
   email: (value: string) => {
     if (isEmpty(value)) return 'This field is required.'
 
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return !regex.test(value) ? 'Invalid email address' : '';
+    return !regex.test(value) ? 'Invalid email address.' : '';
   },
   phoneNumber: (value: string) => {
     return isEmpty(value) ? 'This field is required.' : ''
@@ -46,7 +46,6 @@ function MultiStepForm() {
     email: 'This field is required.',
     phoneNumber: 'This field is required.'
   })
-
 
   const [formData, setFormData] = useState<FormData>({
     name: '',

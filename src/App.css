@@ -1,7 +1,9 @@
 :root {
   /* Primary */
   --marine-blue: hsl(213, 96%, 18%);
+  --marine-blue-hover: hsl(213, 96%, 30%);
   --purplish-blue: hsl(243, 100%, 62%);
+  --purplish-blue-hover: hsl(243, 100%, 80%);
   --pastel-blue: hsl(228, 100%, 84%);
   --light-blue: hsl(206, 94%, 87%);
   --strawberry-red: hsl(354, 84%, 57%);
@@ -18,6 +20,8 @@
   --fw-regular: 400;
   --fw-bold: 500;
   --fw-extra-bold: 700;
+
+  --sidebar-desktop-height: 568px;
 }
 
 /*
@@ -53,9 +57,11 @@ body {
 
   font-family: var(--ff);
   font-size: 1rem;
+  color: var(--marine-blue);
   background-color: var(--white);
 
   display: grid;
+  place-content: center;
   height: 100vh;
   margin: 0;
 }
@@ -70,5 +76,9 @@ button {
 }
 
 [class*='container'].selected {
-  border-color: black;
+  border-color: var(--marine-blue);
+}
+
+label[class*='container']:hover {
+  cursor: pointer;
 }

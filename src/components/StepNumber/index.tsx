@@ -1,17 +1,24 @@
 import { useMultiStepFormContext } from '../MultiStepForm/context/useMultiStepFormContext';
 import './stepNumber.css'
 
-export interface StepNumberProps {
-  step: number;
+export interface StepProps {
+  number: number;
+  name: string;
 }
 
-function StepNumber({ step }: StepNumberProps) {
+function StepItem({ number, name }: StepProps) {
   const { step: activeStep } = useMultiStepFormContext()
 
-  const isActive = activeStep === step || step === 4 && activeStep > step
+  const isActive = activeStep === number || number === 4 && activeStep > number
   return (
-    <div className={`step-number ${isActive ? 'active' : ''}`}>{step}</div>
+    <div className="step-item">
+      <div className={`step-number ${isActive ? 'active' : ''}`}>{number}</div>
+      <div className="step-name-sub_name">
+        <p className="step-sub_name">{`Step ${number}`}</p>
+        <p className="step-name">{name}</p>
+      </div>
+    </div>
   )
 }
 
-export default StepNumber
+export default StepItem

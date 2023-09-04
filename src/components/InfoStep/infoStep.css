@@ -2,23 +2,28 @@
  display: grid;
  gap: 1rem;
  padding: 1rem 0;
+ color: var(--marine-blue);
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+ 
   gap: 0.2rem;
 }
 
 label {
   font-size: 0.875rem;
+  font-weight: var(--fw-bold);
 }
 
 .form-group span.error {
   color: var(--strawberry-red);
 }
+.form-group span.error[data-device="desktop"] {
+  display: none
+}
 .form-group input.error {
-  border: 2px solid var(--strawberry-red);
+  border: 1px solid var(--strawberry-red);
 }
 
 .info-input {
@@ -30,4 +35,40 @@ label {
 
 ::placeholder {
   color: var(--cool-gray);
+}
+
+@media screen and (min-width: 850px) {
+  .info-content-wrapper {
+    padding-top: 2.2rem;
+    gap: 1.25rem
+  }
+  
+  .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 0.35rem;
+    color: var(--marine-blue);
+  }
+
+  .form-group span.error[data-device="desktop"] {
+    display: block;
+    font-weight: var(--fw-extra-bold);
+  }
+
+  .form-group span.error[data-device="mobile"] {
+    display: none
+  }
+
+  .info-input {
+    width: 100%;
+    color: var(--marine-blue);
+    font-size: 1rem;
+    font-weight: var(--fw-extra-bold);
+  }
+
+  ::placeholder {
+    font-weight: var(--fw-bold);
+  }
 }

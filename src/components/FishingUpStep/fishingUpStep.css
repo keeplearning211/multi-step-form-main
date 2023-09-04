@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.fishing_up-plan--action:hover {
+  color: var(--purplish-blue-hover);
+}
+
 .fishing_up-plan--price {
   font-size: 0.9375rem;
   font-weight: var(--fw-extra-bold);
@@ -71,4 +75,46 @@
   font-size: 1rem;
   font-weight: var(--fw-extra-bold);
   color: var(--purplish-blue);
+}
+
+@media screen and (min-width: 850px) {
+  .fishing_up-wrapper{
+    gap: 1.5rem;
+  }
+
+  .fishing_up-plan {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+  }
+  
+  .fishing_up-plan--name {
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--marine-blue);
+    letter-spacing: unset;
+  }
+
+  .fishing_up-plan--price {
+    font-size: 1rem;
+    padding-top: 1.125rem;
+  }
+  
+  .fishing_up-plan--action {
+    font-size: 0.9376rem;
+    letter-spacing: -1px;
+  }
+
+  .fishing_up-add_ons--item__price {
+    font-size: 0.9375rem;
+  }
+
+  .fishing_up-total {
+    margin-top: 1.2rem;
+  }
+
+  .fishing_up-total--value {
+    font-size: 1.25rem;
+  }
 }

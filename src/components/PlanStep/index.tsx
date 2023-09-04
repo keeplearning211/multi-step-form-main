@@ -13,9 +13,11 @@ function PlanStep() {
       description="You have the option of monthly or yearly billing."
     >
       <div className="plan_content-wrapper">
-        <BillingOption value={yearly ? BillingOptionValue.ArcadeYr : BillingOptionValue.ArcadeMo} />
-        <BillingOption value={yearly ? BillingOptionValue.AdvancedYr : BillingOptionValue.AdvancedMo} />
-        <BillingOption value={yearly ? BillingOptionValue.ProYr : BillingOptionValue.ProMo} />
+        <div className="billing-option-list">
+          <BillingOption value={yearly ? BillingOptionValue.ArcadeYr : BillingOptionValue.ArcadeMo} />
+          <BillingOption value={yearly ? BillingOptionValue.AdvancedYr : BillingOptionValue.AdvancedMo} />
+          <BillingOption value={yearly ? BillingOptionValue.ProYr : BillingOptionValue.ProMo} />
+        </div>
         <div className="billing_period-wrapper">
           <p className={`billing_period-label ${yearly ? '' : 'selected'}`}>Monthly</p>
           <label className="billing_period-switch">
